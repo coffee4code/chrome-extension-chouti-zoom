@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "jquery.js" ]
+   },
+   "browser_action": {
+      "default_icon": "photohovers16.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery.js", "zoomer.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Easily zoom into photos on the web",
+   "homepage_url": "http://www.photohovers.com/",
+   "icons": {
+      "128": "photohovers128.png",
+      "16": "photohovers16.png",
+      "48": "photohovers48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC+H5VuNkFIg0b48FM/Mn9D1Da7SNmJA4UvD7f4zdBnvCZySpC3YLn0V6VJ99KAZ38gNxyHrJVRiAUhf6eFJcLgoW+eb6pLQQMMWc+P6795fiqgvvsFg4Ymy0GEUiWfVNgzxpqSmp6bM+JMZxfRl4ttiN8E39Q/sd3RoK5IinhaGwIDAQAB",
+   "manifest_version": 2,
+   "name": "Photo Hovers",
+   "permissions": [ "tabs", "contextMenus", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "manifest.json", "content.css", "zoomer.css" ]
+}
